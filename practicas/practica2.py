@@ -1,24 +1,26 @@
-# Diccionario de usuarios y contraseñas
-usuarios = {
-    "juan": "1234",
-    "maria": "abcd",
-    "luis": "pass123"
-}
+credenciales = {"admin": "123456", "invitado": "root"}
 
-usuario = input("Ingrese su nombre de usuario: ")
+user = input("Ingrese su usuario: ")
+password = input("Ingrese su contraseña: ")
 
-# Verificar si el usuario existe
-if usuario in usuarios:
-    intentos = 0
-    while intentos < 3:
-        contrasena = input("Ingrese su contraseña: ")
-        if contrasena == usuarios[usuario]:
-            print("Acceso concedido.")
+if user in credenciales:
+    #usuario existe
+    intentos = 1
+    while True:
+        if credenciales[user] == password:
+            #acceso correcto
+            print("Acceso correcto")
             break
         else:
+            #contraseña incorrecta
             intentos += 1
-            print(f"Contraseña incorrecta. Intento {intentos}/3.")
-    else:
-        print("Acceso bloqueado por demasiados intentos fallidos.")
+            if intentos <= 3:
+                password = input(f"Intento {intentos} de 3. Ingrese su contraseña: ")
+            else: 
+                print("Contraseña incorrecta. Pruebe dentro de una hora.") 
+                break
+
 else:
-    print("El usuario no existe.")
+    #usuario no existe
+    print("Credenciales inválidos.")
+    

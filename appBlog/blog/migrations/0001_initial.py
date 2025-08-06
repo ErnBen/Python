@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=500)),
                 ('texto', models.TextField()),
                 ('fecha_creacion', models.DateTimeField(default=django.utils.timezone.now)),
-                ('fecha_publicacion', models.DateTimeField(blank=True, null=True)),
+                ('feha_publicacion', models.DateTimeField(blank=True, null=True)),
                 ('autor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

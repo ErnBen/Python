@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from sistema1.view import saludo,getGoogle
+from sistema1.views import saludo, getGoogle
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sumar/', saludo),
-    path('goo/', getGoogle),
+    path('goo/', getGoogle),  
 ]

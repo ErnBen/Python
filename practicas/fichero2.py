@@ -1,27 +1,27 @@
 '''
-    Contar palabrasm de un archivo o una web
+    contar palabras de un archivo o una web
 '''
 
 from urllib import request
 from urllib.error import URLError
-def ver_contenido(url):
+def ver_contenio(url):
     try:
-        f= request.urlopen(url)
+        f = request.urlopen(url)
     except URLError:
-        return('¡La url '+ url + 'no existe!')
-    else:
+        return('¡La url ' + url + 'no existe! ')
+    else: 
         contenido = f.read()
         return contenido
 def contar_palabras(url):
     try:
         f = request.urlopen(url)
     except URLError:
-        return('¡La url '+ url + 'no existe!')
+        return('¡La url ' + url + 'no existe! ')
     else:
         contenido = f.read()
-        return len(contenido)
+        return len(contenido.split())
 
 url = 'https://es.wikipedia.org/wiki/Python'
-print(ver_contenido(url))
-print("\n-------------------------------------------\n")
+print(ver_contenio(url))
+print("\n------------------------\n") 
 print(contar_palabras(url))
