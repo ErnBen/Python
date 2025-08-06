@@ -1,0 +1,77 @@
+    body{
+        background-color: rgb(231, 231, 231);
+        background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2024/04/fallout-4-10-must-have-perks.jpg ");
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+    .contenedor{
+        width: 90%;
+        height: 400px;
+        background-color: rgba(197 ,197, 197 , 0.5);
+        margin: auto;
+        margin-top: 100px;
+        position: relative;
+    }
+.capa-uno{
+width: 60%;
+height: 300px;
+float: left;
+background-color: rgba(84, 233, 111, 0.5);
+position: relative;
+}
+.capa-from{
+    width: 40%;
+    height: 300px;
+    float: left;
+    background-color: rgb(109, 130, 8,0.5);
+    position: relative;
+}
+.img-slider{
+    width: auto;
+    height: 80%;
+    border-radius: 20px;
+    margin-top: 5%;
+    transition: 300ms;
+    float: left;
+    position: absolute;
+}
+.img-slider1{
+    transform: rotate(-15deg);
+    margin-left: 20%;
+}
+.img-slider2{
+    transform: rotate(6deg);
+    margin-left: 40%;
+}
+.img-slider3{
+    transform: rotate(15deg);
+    margin-left: 60%;
+}
+.img-slider:hover{
+    transform: rotate(0deg) scale(1.5);
+    margin-right: 30%;
+    z-index: 2;
+    box-shadow: 5px 5px 5px #6b6a6acc;
+} 
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 28pt;
+}
+p,a{
+    font-family: sans-serif;
+    color: #f0f0f0;
+    font-size: 14pt;
+    text-decoration: none;
+    transition: 300ms;
+}
+a:hover{
+    color:#4ee1f8;
+    text-decoration:underline;
+}
+button{
+    background-color: #A791ff;
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+}
