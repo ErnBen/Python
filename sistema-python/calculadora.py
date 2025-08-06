@@ -1,5 +1,5 @@
 # calculadora.py
-import math
+
 class Calculadora:
     def suma(self, a, b):
         """Suma dos números"""
@@ -7,7 +7,7 @@ class Calculadora:
 
     def resta(self, a, b):
         """Resta dos números"""
-        pass
+        return a - b # retorna la resta. by Regina
 
     def multiplicacion(self, a, b):
         """Multiplica dos números"""
@@ -23,9 +23,7 @@ class Calculadora:
 
     def raiz_cuadrada(self, a):
         """Calcula la raíz cuadrada de un número"""
-        if a < 0:
-            return "Error: No se puede calcular la raíz cuadrada de un número negativo."
-        return math.sqrt(a) #retorna la raiz cuadrada de a : by Alexis
+        pass
 
     def modulo(self, a, b):
         """Calcula el módulo (resto) de la división"""

@@ -6,7 +6,7 @@ import time
 driver = webdriver.Chrome()
 driver.get("https://www.wikipedia.org")
 
-web_element = driver.find_element(By.NAME, 'search')
+web_element = driver.find_element(By.NAME,'search')
 web_element.send_keys("Python" + Keys.ENTER)
 
 time.sleep(30)

@@ -1,6 +1,6 @@
 from urllib import request
 from urllib.error import URLError
-lpo = ["coño", "bobo", "culiao", "pinche", "estupido", "estupida"]
+lpo = ["coño", "bobo", "estupido"]
 
 def verificar_web(url):
     try:
@@ -14,12 +14,12 @@ def verificar_web(url):
         cantidad_po = 0
         for l in lpo:
             for con in contenido:
-                if l in con.decode():
+                if l in con.decode() :
                     palabras_encontradas.append(l)
 
         return palabras_encontradas
 
 url = 'https://es.wiktionary.org/wiki/Wikcionario:Insultos_regionales'
-print("\n---------------------------------------------\n")
-print("\nInforme de sitio:\n")
+print("\n ----------------------\n")
+print("\nInforme de sitio: ")
 print(verificar_web(url))

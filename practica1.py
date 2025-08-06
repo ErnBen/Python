@@ -1,24 +1,20 @@
-#Promedio y estado
 notas = []
-TAM = 3
-sumatoria = 0
 
-for x in range(TAM):
+for x in range(5):
     nota = 0
     while nota < 1 or nota > 5:
-        nota = int(input(f"Nota: {x+1}:" ))
-        
+        nota = int(input(f"Nota {x+1}: "))
+
     notas.append(nota)
 
-for x in range(len(notas)):
-    sumatoria = sumatoria + notas[x]
+suma = 0
+for x in range (len(notas)):
+    suma = suma + notas[x]
 
-print("---------Estadistica---------")
-print(f"Promedio: {sumatoria / TAM}")
-estado = ""
-if(float(sumatoria/ TAM)> 1.7):
-    estado = "Aprobado"
+promedio = suma / len(notas)
+print(f"Promedio: {promedio}")
+
+if (promedio > 1.7):
+    print("APROBADO :)")
 else:
-    estado = "Reprobado"
-    
-print(f"Estado:{estado}")
+    print("DESAPROBADO :(")

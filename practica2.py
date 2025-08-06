@@ -1,20 +1,19 @@
-credenciales = {"admin": "12346", "invitado":"root"}
+diccUsuario = {"admin":"12345", "moises":"abcd"}
 
-user = input("Ingrese se usario: ")
+user = input("Ingrese su usuario: ")
 password = input("Ingrese su contraseña: ")
- 
-if user in credenciales:
-    intentos = 1
-    while True:
-        if credenciales[user] == password:
-            print("Acceso correcto")
+
+intentos = 0
+if user in diccUsuario:
+    #usuario existente
+    intentos = intentos + 1
+    while intentos < 3:
+        if password == diccUsuario[user]:
+            print("Acceso correto")
             break
-        else:
-            intentos += 1
-            if intentos <= 3:
-                password = input(f"Intentos {intentos} de 3. Ingrese su contraseña:")
-            else:
-                print("Demaciados intentos. Prueben en una hora")
-                break
+        else: 
+            print("Acceso incorrecto")
+            intentos = intentos + 1
+            password = input(f"Intento {intentos} de 3. Reescriba su contraseña: ")
 else:
-    print("Credenciales invalidos")
+    print("Usuario no registrado")        
